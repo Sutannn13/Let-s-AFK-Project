@@ -36,6 +36,8 @@ yarn-error.log*
 .env*.local
 .env.local
 
+# kecuali file template ini, boleh masuk repo
+!.env.local.example
 
 # vercel
 .vercel
