@@ -1,0 +1,1 @@
+update events set capacity = 20 where capacity = 0;

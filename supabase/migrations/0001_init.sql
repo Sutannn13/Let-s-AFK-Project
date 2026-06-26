@@ -1,8 +1,3 @@
--- ============================================================
--- Let's AFK - Database Schema (Sprint 1)
--- Jalankan SQL ini di Supabase SQL Editor
--- ============================================================
-
 -- Enum types
 CREATE TYPE afk_type_enum AS ENUM ('Big AFK', 'Mini AFK', 'Brand Visit');
 CREATE TYPE indoor_outdoor_enum AS ENUM ('indoor', 'outdoor', 'hybrid');
