@@ -6,9 +6,6 @@ CREATE TYPE payment_status_enum AS ENUM ('unpaid', 'paid');
 CREATE TYPE attendance_status_enum AS ENUM ('registered', 'attended', 'no-show');
 
 -- ============================================================
--- Tabel participants
--- Satu baris per orang unik, identitas utama = nomor WhatsApp
--- ============================================================
 CREATE TABLE participants (
   participant_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   whatsapp_number TEXT NOT NULL UNIQUE,
@@ -21,9 +18,6 @@ CREATE TABLE participants (
   created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
--- ============================================================
--- Tabel events
--- Satu baris per event
 -- ============================================================
 CREATE TABLE events (
   event_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -42,10 +36,6 @@ CREATE TABLE events (
   host_name TEXT,
   created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
-
--- ============================================================
--- Tabel registrations
--- Tabel jembatan antara participants dan events
 -- ============================================================
 CREATE TABLE registrations (
   registration_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
